@@ -40,7 +40,7 @@ function App() {
     setTimer(
       setTimeout(() => {
         setTraveller(target.value);
-      }, 1000)
+      }, 100)
     );
   }
 

@@ -71,16 +71,11 @@ function Pdf({ hour, minute, traveller, cabinNumber, date }) {
     const blob = new Blob([bytes], { type: "application/pdf" });
     setDocUrl(URL.createObjectURL(blob));
   }
-
+//<iframe className="pdf-iframe" title="test-frame" src={docUrl} type="application/pdf" />
   if (docUrl) {
     return (
       <>
-        <iframe
-          className="pdf-iframe"
-          title="test-frame"
-          src={docUrl}
-          type="application/pdf"
-        />
+        
         <div>
           <a className="pdf-viewbutton" href={docUrl} target="_blank">
             View
