@@ -30,7 +30,7 @@ function Pdf({ hour, minute, traveller, cabinNumber, date }) {
     const { width, height } = page.getSize();
     const textcolor = rgb(0.0, 0.58, 0.67);
 
-    page.drawText(hour + ":" + minute, {
+    page.drawText(hour.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ":" + minute.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}), {
       x: width * 0.04,
       y: height - height * 0.2603 - 26 + 5,
       size: 26,
