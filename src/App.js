@@ -6,6 +6,7 @@ function App() {
   const [chosenCabin, setChosenCabin] = useState(0);
   const [traveller, setTraveller] = useState("");
   const [traveldate, setTraveldate] = useState(Date.now());
+  const [timer, setTimer] = useState(null);
 
   var cabinoptions = [];
   var minuteincrement = 15;
@@ -30,40 +31,55 @@ function App() {
       cabintime % 60,
     ];
   }
+
+  function changeDelay(target) {
+    if (timer) {
+      clearTimeout(timer);
+      setTimer(null);
+    }
+    setTimer(
+      setTimeout(() => {
+        setTraveller(target.value);
+      }, 1000)
+    );
+  }
+
   return (
     <div className="App">
       <div className="App-input">
-        <div> <label>
-          What's your name?
-          <input
-            value={traveller}
-            onChange={(e) => setTraveller(e.target.value)}
-          ></input>
+        <div>
+          {" "}
+          <label>
+            What's your name?
+            <input
+              defaultValue={traveller}
+              onChange={(e) => changeDelay(e.target)}
+            ></input>
           </label>
         </div>
         <div>
           <label>
-          Which cabin do you want?
-          <select
-            value={chosenCabin}
-            onChange={(e) => setChosenCabin(e.target.value)}
-          >
-            {cabinoptions.map(([number, hour, minute], i) => (
-              <option value={i}>
-                {number} {hour}:{minute}
-              </option>
-            ))}
-          </select>
+            Which cabin do you want?
+            <select
+              value={chosenCabin}
+              onChange={(e) => setChosenCabin(e.target.value)}
+            >
+              {cabinoptions.map(([number, hour, minute], i) => (
+                <option value={i}>
+                  {number} - {hour}:{minute}
+                </option>
+              ))}
+            </select>
           </label>
         </div>
         <div>
           <label>
             When are you travelling?
-          <input
-            type="date"
-            value={new Date(traveldate).toISOString().substr(0, 10)}
-            onChange={(e) => setTraveldate(e.target.valueAsNumber)}
-          ></input>
+            <input
+              type="date"
+              value={new Date(traveldate).toISOString().substr(0, 10)}
+              onChange={(e) => setTraveldate(e.target.valueAsNumber)}
+            ></input>
           </label>
         </div>
       </div>

@@ -82,7 +82,7 @@ function Pdf({ hour, minute, traveller, cabinNumber, date }) {
           type="application/pdf"
         />
         <div>
-          <a className="pdf-viewbutton" href={docUrl}>
+          <a className="pdf-viewbutton" href={docUrl} target="_blank">
             View
           </a>
           <a
