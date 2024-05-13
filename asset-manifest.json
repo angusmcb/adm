@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/adm/static/css/main.4113e296.css",
-    "main.js": "/adm/static/js/main.165905c6.js",
+    "main.js": "/adm/static/js/main.274d3aef.js",
     "static/js/453.4df4d1fa.chunk.js": "/adm/static/js/453.4df4d1fa.chunk.js",
     "static/media/calibrib.ttf": "/adm/static/media/calibrib.17277ae75f05f8628d08.ttf",
     "static/media/qrticket_template.pdf": "/adm/static/media/qrticket_template.4ccabca502a9ae5ab14e.pdf",
     "index.html": "/adm/index.html",
     "main.4113e296.css.map": "/adm/static/css/main.4113e296.css.map",
-    "main.165905c6.js.map": "/adm/static/js/main.165905c6.js.map",
+    "main.274d3aef.js.map": "/adm/static/js/main.274d3aef.js.map",
     "453.4df4d1fa.chunk.js.map": "/adm/static/js/453.4df4d1fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4113e296.css",
-    "static/js/main.165905c6.js"
+    "static/js/main.274d3aef.js"
   ]
 }
