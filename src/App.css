@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.App-input div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.app-pdfarea {
+  height: 600px;
+}
