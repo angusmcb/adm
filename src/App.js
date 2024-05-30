@@ -11,11 +11,11 @@ function App() {
   var cabinoptions = [];
   var minuteincrement = 15;
   var cabinnumberincrement = 2;
-  var hour = 8;
-  var startminute = 40;
-  var startcabin = 21;
+  var starthour = 6;
+  var startminute = 10;
+  var startcabin = 1;
   var lastcabin = 65;
-  var starttime = hour * 60 + startminute;
+  var starttime = starthour * 60 + startminute;
   var cabinone =
     starttime - (startcabin / cabinnumberincrement) * minuteincrement;
 
